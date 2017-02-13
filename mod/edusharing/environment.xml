@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<COMPATIBILITY_MATRIX>
+      <PHP_EXTENSION name="mcrypt" level="required">
+        <FEEDBACK>
+          <ON_ERROR message="mcryptrequired" />
+        </FEEDBACK>
+      </PHP_EXTENSION>
+      <PHP_EXTENSION name="soap" level="required">
+        <FEEDBACK>
+          <ON_ERROR message="soaprequired" />
+        </FEEDBACK>
+      </PHP_EXTENSION>
+</COMPATIBILITY_MATRIX>
