@@ -262,6 +262,7 @@ foreach (explode(',', $frontpagelayout) as $v) {
             // No "break" here. If there are no enrolled courses - continue to 'Available courses'.
 
         case FRONTPAGEALLCOURSELIST:
+			//echo "All Course List";
             $availablecourseshtml = $courserenderer->frontpage_available_courses();
             if (!empty($availablecourseshtml)) {
                 echo html_writer::link('#skipavailablecourses',
@@ -282,6 +283,7 @@ foreach (explode(',', $frontpagelayout) as $v) {
         break;
 
         case FRONTPAGECATEGORYNAMES:
+			//echo "Category Names";
             echo html_writer::link('#skipcategories',
                 get_string('skipa', 'access', core_text::strtolower(get_string('categories'))),
                 array('class' => 'skip skip-block'));
@@ -290,7 +292,7 @@ foreach (explode(',', $frontpagelayout) as $v) {
             echo html_writer::start_tag('div', array('id' => 'frontpage-category-names'));
 
             echo $OUTPUT->heading(get_string('categories'));
-            echo $courserenderer->frontpage_categories_list();
+            echo $courserenderer->frontpage_combo_list();
 
             // End frontpage category names div container.
             echo html_writer::end_tag('div');
@@ -299,6 +301,7 @@ foreach (explode(',', $frontpagelayout) as $v) {
         break;
 
         case FRONTPAGECATEGORYCOMBO:
+			//echo "Category Combo";
             echo html_writer::link('#skipcourses',
                 get_string('skipa', 'access', core_text::strtolower(get_string('courses'))),
                 array('class' => 'skip skip-block'));
