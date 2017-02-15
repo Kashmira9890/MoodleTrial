@@ -162,7 +162,7 @@ if (empty($CFG->forcedefaultmymoodle) && $PAGE->user_allowed_editing()) {
 }
 
 echo $OUTPUT->header();
-
+echo "<h1>Hi Kashmira!</h1>";
 echo $OUTPUT->custom_block_region('content');
 
 echo $OUTPUT->footer();
