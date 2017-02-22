@@ -292,7 +292,7 @@ foreach (explode(',', $frontpagelayout) as $v) {
             echo html_writer::start_tag('div', array('id' => 'frontpage-category-names'));
 
             echo $OUTPUT->heading(get_string('categories'));
-            echo $courserenderer->frontpage_combo_list();
+            echo $courserenderer->frontpage_categories_list();
 
             // End frontpage category names div container.
             echo html_writer::end_tag('div');
