@@ -33,7 +33,6 @@ class block_simplehtml extends block_base {
 	
 		$this->content         =  new stdClass;
 		$this->content->text   = 'The content of our SimpleHTML block!';
-		$this->content->footer = 'Footer here...';
 	
 		return $this->content;
 	}

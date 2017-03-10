@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 // This file is part of Moodle - http://moodle.org/
 //
@@ -139,6 +141,7 @@ if ($addsectionatpage = optional_param('addsectionatpage', false, PARAM_INT)) {
     $structure->check_can_be_edited();
     $structure->add_section_heading($addsectionatpage);
     quiz_delete_previews($quiz);
+    //$afteractionurl->set_anchor('addsectionatpage');
     redirect($afteractionurl);
 }
 
@@ -205,6 +208,11 @@ for ($pageiter = 1; $pageiter <= $numberoflisteners; $pageiter++) {
 $PAGE->requires->data_for_js('quiz_edit_config', $quizeditconfig);
 $PAGE->requires->js('/question/qengine.js');
 
+//To capture scroll position
+//Added the folder 'js' to mod/quiz containing javascript to capture scroll position
+//So that when you come back to this page, you are directed to the same location from where you left off..
+//$PAGE->requires->js('/mod/quiz/js/maintainscroll.jquery.min.js');
+
 // Questions wrapper start.
 echo html_writer::start_tag('div', array('class' => 'mod-quiz-edit-content'));
 
@@ -212,5 +220,10 @@ echo $output->edit_page($quizobj, $structure, $contexts, $thispageurl, $pagevars
 
 // Questions wrapper end.
 echo html_writer::end_tag('div');
-
+//echo "scroll ".$scrollpos;
 echo $OUTPUT->footer();
+?>
+<!-- Added to capture the scroll position...but isn,t working -->
+<!-- <script type="text/javascript" src="C:\xampp\htdocs\moodle\mod\quiz\js\maintainscroll.jquery.min.js"></script> -->
+</body>
+</html>

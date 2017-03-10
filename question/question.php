@@ -321,5 +321,6 @@ $PAGE->navbar->add($streditingquestion);
 // Display a heading, question editing form and possibly some extra content needed for
 // for this question type.
 echo $OUTPUT->header();
+//echo $returnurl;
 $qtypeobj->display_question_editing_page($mform, $question, $wizardnow);
 echo $OUTPUT->footer();

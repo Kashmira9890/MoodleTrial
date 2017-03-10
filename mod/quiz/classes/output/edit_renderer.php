@@ -37,7 +37,7 @@ use renderable;
  * @since Moodle 2.7
  */
 class edit_renderer extends \plugin_renderer_base {
-
+	
     /**
      * Render the edit page
      *
@@ -84,6 +84,7 @@ class edit_renderer extends \plugin_renderer_base {
         $output .= $this->end_section_list();
 
         // Initialise the JavaScript.
+        //$this->page->requires->js('/mod/quiz/js/maintainscroll.jquery.min.js');
         $this->initialise_editing_javascript($structure, $contexts, $pagevars, $pageurl);
 
         // Include the contents of any other popups required.
@@ -336,11 +337,11 @@ class edit_renderer extends \plugin_renderer_base {
      */
     public function section_shuffle_questions(structure $structure, $section) {
         $checkboxattributes = array(
-            'type' => 'checkbox',
-            'id' => 'shuffle-' . $section->id,
-            'value' => 1,
+            'type' 		  => 'checkbox',
+            'id' 		  => 'shuffle-' . $section->id,
+            'value' 	  => 1,
             'data-action' => 'shuffle_questions',
-            'class' => 'cm-edit-action',
+            'class' 	  => 'cm-edit-action',
         );
 
         if (!$structure->can_be_edited()) {
