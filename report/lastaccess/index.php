@@ -136,6 +136,6 @@ if(isset($data->course)){
 	//echo userdate($data->fromdate);
 	//echo $OUTPUT->single_button("index.php?export=1&cid=$data->course&cd=$data->todate&ld=$data->fromdate", get_string('exportcsv','report_lastaccess'));
 }
-	
+echo "Hey..I'm editing this file online through Github";	
 echo $OUTPUT->footer();
 
